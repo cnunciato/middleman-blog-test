@@ -1,0 +1,12 @@
+prose:
+  rooturl: 'source'
+  media: 'source/media'
+  ignore:
+    - _prose.yml
+    - Gemfile
+    - Gemfile.lock
+    - config.rb
+    - source/images
+    - source/stylesheets
+    - source/javascripts
+    - source/layouts
