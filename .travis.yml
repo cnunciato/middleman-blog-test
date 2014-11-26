@@ -1,3 +1,14 @@
 language: ruby
 rvm:
-  - '2.1.2'
+- 2.1.2
+deploy:
+  provider: s3
+  bucket: middleman-blog-test
+  skip_cleanup: true
+  local-dir: build
+  acl: public_read
+  on:
+    repo: cnunciato/middleman-blog-test
+env:
+  global:
+    secure: bZmjTEJ3w44mYPKcmLavDjTj9AUUzFhryVNkQXxmhefdlJtz3zMfFTX36dKKR/qclUde7b9fyjEoHcMfClXJq93PQAndUj93jU595jyWPqxTYdSUFBChOEOlwkuXiCw0ECvo8VmR1oZUjpcjSiYc2spZXxvvkSNhO7jRbsabvvA=
