@@ -1,18 +1,18 @@
 language: ruby
 rvm:
-- 2.1.2
+  - 2.1.2
 deploy:
   provider: s3
+  access_key_id:
+    secure: G8i6jVQYy6ZaTrnp49vmxi1hnZbEKKEivRk0aTDk1rbOsJye2b8j/pUcN9zvvu6aoeb0DFiVMVXf0HEaHnyir7Zw/6qpmK8bTVSB4cCsF+0+bqkmH9LjrIX4rfcofVE3eiYeL2rVQCn71jW6fACXR0mqqY4Y/EEM6pxfrHVkpdk=
+  secret_access_key:
+    secure: Sq6EQIzAaaKEwh/+fvB0xY/SgpfDiekW/d6G+04FpTlfCKp8+lTGAgVrLk/acztIx9Jre4wrRDnlqBReJKrDX4a1yUgdlVKLANyVtAaH64PE0gyeUlhRknhjiWlkUpGvdS6uj1KaPm5HxzrztH/ac3NjJlxaxZrxx2oqfIlc/Z8=
   bucket: middleman-blog-test
   skip_cleanup: true
   local-dir: build
   acl: public_read
   on:
     repo: cnunciato/middleman-blog-test
-env:
-  global:
-  - secure: SxHP2+0wSBZas4k7hpFDoMGzyk6ckD+H6s8jwEn4Wj/i0XW64htrJgVSI5npOvqd+nT6IcJ94oISPO1WiQdhUII5VEFpuHDKMqI4cGjzYNzNxy1i5ZtHAUDVJ4Gn/0mDscQC1lLipehWqt0jiYDHjbmcIrLUNA4VuttZWekYUHg=
-  - secure: X3a5R29EuwDl//d1Gqk6+NElz+jdQx+rcyRTg77et4iFVOZtZtxNdC6cB9gcJ2iy8BO9/4cnNXxtVbRrX2WLuQKCDGW3x7mVbGSy5HPii0OAwSeI+iaiEkBRVRMabrXSx7g5osoH8vZAMJoEZj2yXuy/uUUEVYSqGoBD2JLnX50=
 script:
 - bundle exec rspec
 - bundle exec middleman build --verbose
