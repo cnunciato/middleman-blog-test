@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.1.2
+- 2.1.2
 deploy:
   provider: s3
   bucket: middleman-blog-test
@@ -11,7 +11,8 @@ deploy:
     repo: cnunciato/middleman-blog-test
 env:
   global:
-    secure: bZmjTEJ3w44mYPKcmLavDjTj9AUUzFhryVNkQXxmhefdlJtz3zMfFTX36dKKR/qclUde7b9fyjEoHcMfClXJq93PQAndUj93jU595jyWPqxTYdSUFBChOEOlwkuXiCw0ECvo8VmR1oZUjpcjSiYc2spZXxvvkSNhO7jRbsabvvA=
+  - secure: SxHP2+0wSBZas4k7hpFDoMGzyk6ckD+H6s8jwEn4Wj/i0XW64htrJgVSI5npOvqd+nT6IcJ94oISPO1WiQdhUII5VEFpuHDKMqI4cGjzYNzNxy1i5ZtHAUDVJ4Gn/0mDscQC1lLipehWqt0jiYDHjbmcIrLUNA4VuttZWekYUHg=
+  - secure: X3a5R29EuwDl//d1Gqk6+NElz+jdQx+rcyRTg77et4iFVOZtZtxNdC6cB9gcJ2iy8BO9/4cnNXxtVbRrX2WLuQKCDGW3x7mVbGSy5HPii0OAwSeI+iaiEkBRVRMabrXSx7g5osoH8vZAMJoEZj2yXuy/uUUEVYSqGoBD2JLnX50=
 script:
-  - bundle exec rspec
-  - bundle exec middleman build --verbose
+- bundle exec rspec
+- bundle exec middleman build --verbose
