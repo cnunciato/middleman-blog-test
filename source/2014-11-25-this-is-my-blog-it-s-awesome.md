@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "This Is My Blog. It's Awesome."
 ---
 
