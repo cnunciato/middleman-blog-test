@@ -1,6 +1,9 @@
-language: ruby
-rvm:
-  - 2.1.2
+bundler_args: --deployment --without development
+cache:
+  bundler: true
+  directories:
+    - $(rvm gemdir)
+    - build
 deploy:
   provider: s3
   access_key_id:
@@ -14,5 +17,5 @@ deploy:
   on:
     repo: cnunciato/middleman-blog-test
 script:
-- bundle exec rspec
-- bundle exec middleman build --verbose
+  - bundle exec rspec
+  - bundle exec middleman build --verbose
