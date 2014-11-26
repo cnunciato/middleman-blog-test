@@ -16,6 +16,7 @@ prose:
       - name: title
         field: 
           element: text
+          type: text
           label: Title
       - name: published
         field: 
