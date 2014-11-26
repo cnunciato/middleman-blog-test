@@ -11,14 +11,4 @@ prose:
     - source/javascripts
     - source/layouts
     - source/index.html.erb
-  metadata:
-    source:
-      - name: title
-      - name: published
-          field:
-            element: "multiselect"
-            options:
-              - name: Yes
-                value: true
-              - name: No
-                value: false
+  
