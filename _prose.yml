@@ -10,3 +10,16 @@ prose:
     - source/stylesheets
     - source/javascripts
     - source/layouts
+    - source/index.html.erb
+  metadata:
+    source:
+      - name: title
+        field: 
+          element: text
+          type: text
+          label: Title
+      - name: published
+        field: 
+          element: checkbox          
+          label: Publish?
+          placeholder: false
